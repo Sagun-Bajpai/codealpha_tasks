@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CALCX — Calculator | CodeAlpha</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="dot dot1"></div>
+  <div class="dot dot2"></div>
+  <div class="dot dot3"></div>
+
+  <div class="page-label">CodeAlpha  · <span>Task 02</span></div>
+
+  <div class="calculator">
+    <div class="calc-header">
+      <div class="calc-title">CalcX</div>
+      <div class="mode-indicator">
+        <div class="mode-dot"></div>
+        <div class="mode-text">Standard</div>
+      </div>
+    </div>
+
+    <div class="display">
+      <div class="display-history" id="history"></div>
+      <div class="display-main"    id="mainDisplay">0</div>
+    </div>
+
+    <div class="kb-bar">
+      <div class="kb-key"><kbd>0–9</kbd> input</div>
+      <div class="kb-key"><kbd>←</kbd> del</div>
+      <div class="kb-key"><kbd>Esc</kbd> clear</div>
+      <div class="kb-key"><kbd>↵</kbd> equals</div>
+    </div>
+
+    <div class="buttons" id="buttons">
+      <button class="btn btn-fn"  data-action="clear">AC</button>
+      <button class="btn btn-fn"  data-action="sign">±</button>
+      <button class="btn btn-fn"  data-action="percent">%</button>
+      <button class="btn btn-op"  data-action="÷" id="op-÷">÷</button>
+
+      <button class="btn btn-num" data-action="7">7</button>
+      <button class="btn btn-num" data-action="8">8</button>
+      <button class="btn btn-num" data-action="9">9</button>
+      <button class="btn btn-op"  data-action="×" id="op-×">×</button>
+
+      <button class="btn btn-num" data-action="4">4</button>
+      <button class="btn btn-num" data-action="5">5</button>
+      <button class="btn btn-num" data-action="6">6</button>
+      <button class="btn btn-op"  data-action="−" id="op-−">−</button>
+
+      <button class="btn btn-num" data-action="1">1</button>
+      <button class="btn btn-num" data-action="2">2</button>
+      <button class="btn btn-num" data-action="3">3</button>
+      <button class="btn btn-op"  data-action="+" id="op-+">+</button>
+
+      <button class="btn btn-num span2" data-action="0">0</button>
+      <button class="btn btn-num" data-action=".">.</button>
+      <button class="btn btn-eq"  data-action="=">=</button>
+    </div>
+  </div>
+
+
+
+  <script src="script.js"></script>
+  
+</body>
+</html>

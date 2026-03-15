@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>SONIK Player</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&family=Space+Mono&display=swap" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+
+  <!-- LEFT / TOP on mobile -->
+  <div class="L">
+    <div class="brand-row">SONIK PLAYER</div>
+
+    <div class="hero">
+      <div class="art-box">
+        <canvas id="artC" width="280" height="280"></canvas>
+        <div class="vring" id="vring"></div>
+      </div>
+      <div class="sinfo">
+        <div class="stitle" id="stitle">Neon Pulse</div>
+        <div class="sartist" id="sartist">Synthwave Dreams</div>
+        <div class="stags">
+          <span class="tag hi" id="sgenre">Synthwave</span>
+          <span class="tag">GENERATED</span>
+          <span class="tag" id="sbpm">120 BPM</span>
+        </div>
+        <div class="stat" id="stat">▶ Click play to start</div>
+      </div>
+    </div>
+
+    <div class="viz-row">
+      <canvas id="vizC" width="700" height="44"></canvas>
+    </div>
+
+    <div class="prog-row">
+      <div class="trow"><span id="cur">0:00</span><span id="tot">1:00</span></div>
+      <div class="ptrack" id="ptrack"><div class="pfill" id="pfill"></div></div>
+    </div>
+
+    <div class="ctrl-row">
+      <button class="cb" id="shufBtn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/>
+          <polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/>
+        </svg>
+      </button>
+      <button class="cb" id="prevBtn">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="19 20 9 12 19 4 19 20"/><line x1="5" y1="19" x2="5" y2="5"/>
+        </svg>
+      </button>
+      <button class="pbtn" id="playBtn">
+        <svg id="pico" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+      </button>
+      <button class="cb" id="nextBtn">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="5 4 15 12 5 20 5 4"/><line x1="19" y1="5" x2="19" y2="19"/>
+        </svg>
+      </button>
+      <button class="cb" id="repBtn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/>
+          <polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="vol-row">
+      <svg class="vic" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+        <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/>
+      </svg>
+      <input type="range" class="vsl" id="vsl" min="0" max="100" value="75"/>
+      <span class="vpct" id="vpct">75%</span>
+    </div>
+  </div>
+
+  <!-- RIGHT / BOTTOM on mobile -->
+  <div class="R">
+    <div class="ph">
+      <span class="ptitle">PLAYLIST</span>
+      <span class="pct" id="pct">6 tracks</span>
+    </div>
+    <div class="plist" id="plist"></div>
+    <div class="rbot">
+      <span class="albl">Autoplay</span>
+      <label class="tgl"><input type="checkbox" id="autoTog" checked/><span class="tgl-t"></span></label>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
